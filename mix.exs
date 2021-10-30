@@ -31,7 +31,9 @@ defmodule ExS3Edit.MixProject do
       {:ex_aws, "~> 2.1"},
       {:ex_aws_s3, "~> 2.0"},
       {:hackney, "~> 1.9"},
-      {:sweet_xml, "~> 0.6"}
+      {:sweet_xml, "~> 0.6"},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:doctor, "~> 0.18.0", only: :dev}
     ]
   end
 

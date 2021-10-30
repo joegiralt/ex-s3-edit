@@ -49,7 +49,7 @@ defmodule ExS3Edit.Cli do
   end
 
   def command(:read, path) do
-    with {:ok, raw_uri} <- parse_path(path),
+    with {:ok, raw_uri} <- parse_path(path), 
          {:ok, _file_name, file_body} <- S3.fetch_file(raw_uri) do
       """
       S3 Path:
