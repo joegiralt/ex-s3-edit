@@ -1,11 +1,14 @@
 defmodule ExS3Edit.Cli do
+  @moduledoc """
+    Functions for handling core command flags from the root of the project
+  """
   alias ExS3Edit.TmpFileUtil
   alias ExS3Edit.Editor
   alias ExS3Edit.S3
 
   def command(:help) do
     """
-     --help          Surfaces this help prompt
+      --help          Surfaces this help prompt
 
       --edit          Expects a s3 path
                       example: --edit s3://your-bucket/your-file.txt
@@ -49,7 +52,7 @@ defmodule ExS3Edit.Cli do
   end
 
   def command(:read, path) do
-    with {:ok, raw_uri} <- parse_path(path), 
+    with {:ok, raw_uri} <- parse_path(path),
          {:ok, _file_name, file_body} <- S3.fetch_file(raw_uri) do
       """
       S3 Path:
@@ -66,6 +69,6 @@ defmodule ExS3Edit.Cli do
 
   # TODO: switch to URI.new once elixir 1.13 is out
   defp parse_path(path) do
-    {:ok, URI.parse(path) }
+    {:ok, URI.parse(path)}
   end
 end

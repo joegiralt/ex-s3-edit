@@ -1,4 +1,7 @@
 defmodule ExS3Edit.TmpFileUtil do
+  @moduledoc """
+    Helper Functions for handling reading, writing, and deleting tmp files locally
+  """
   def write(file_name, file_body) do
     case File.write(file_name, file_body) do
       :ok -> {:ok, "successful write!"}

@@ -1,4 +1,7 @@
 defmodule ExS3Edit.S3 do
+  @moduledoc """
+    Functions for handling all api calls (save, edit, get, etc) to AWS S3
+  """
   def request_object(valid_uri) do
     req =
       ExAws.S3.get_object(valid_uri.host, valid_uri.path)

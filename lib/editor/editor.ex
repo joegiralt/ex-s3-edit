@@ -1,4 +1,8 @@
 defmodule ExS3Edit.Editor do
+  @moduledoc """
+    Functions for handling finding and opening the default editor
+    for the user's CLI
+  """
   def open_with_default(file_name) do
     port = Port.open({:spawn, "#{default_editor()} #{file_name}"}, [:nouse_stdio, :exit_status])
 

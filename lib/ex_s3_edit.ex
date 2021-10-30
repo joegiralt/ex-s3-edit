@@ -1,4 +1,8 @@
 defmodule ExS3Edit do
+  @moduledoc """
+    Root module, parses CLI args to the internal Cli.commands and then, prints thier result
+    to the CLI
+  """
   use Bakeware.Script
   alias ExS3Edit.Cli
 
