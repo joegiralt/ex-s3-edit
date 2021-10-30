@@ -67,7 +67,6 @@ defmodule ExS3Edit.Cli do
     end
   end
 
-  # TODO: switch to URI.new once elixir 1.13 is out
   defp parse_path(path) do
     {:ok, URI.parse(path)}
   end
