@@ -71,7 +71,7 @@ $ ex_s3_edit --read s3://mybucket/myfile.txt
 
 ### Requirements
 
-* Elixir >= 1.13
+* Elixir >= 1.12.3
 * Erlang >= 24.1.3
 ### To run in iex interactive mode
 ```bash
