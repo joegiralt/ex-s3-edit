@@ -1,6 +1,5 @@
 # ex-s3-edit
 Edit files directly on Amazon S3 in CLI
-[![GitHub release](https://img.shields.io/github/release/joegiralt/ex-s3-edit.svg?style=flat-square)](https://github.com/joegiralt/ex-s3-edit/releases)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/joegiralt/ex-s3-edit/main.svg?style=flat-square)](https://circleci.com/gh/joegiralt/ex-s3-edit/tree/main)
 [![MIT license](https://img.shields.io/github/license/joegiralt/ex-s3-edit.svg?style=flat-square)](https://github.com/joegiralt/ex-s3-edit/blob/main/LICENSE)
 
