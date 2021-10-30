@@ -10,7 +10,7 @@ Directly inspired by [s3-edit](https://github.com/tsub/s3-edit) written in Go by
 
 ### Install with Homebrew
 
-For macOS and Linux
+For macOS and Linux(coming soon)
 
 ```
 $ brew install joegiralt/ex-s3-edit/ex-s3-edit
@@ -52,20 +52,20 @@ $ aws s3 cp test.txt s3://mybucket/myfile.txt
 To directly edit a file on S3, use `--edit` subcommand.
 
 ```bash
-$ ex-s3-edit --edit s3://mybucket/myfile.txt
+$ ex_s3_edit --edit s3://mybucket/myfile.txt
 ```
 Then a file will open with the default editor specified by `$EDITOR` or `EDITOR`.
 
 To view a list of all files in S3, use `--list` subcommand.
 
 ```bash
-$ ex-s3-edit --list
+$ ex_s3_edit --list
 ```
 
 To view the contents of a specific file in S3, use `--read` subcommand.
 
 ```bash
-$ ex-s3-edit --read s3://mybucket/myfile.txt
+$ ex_s3_edit --read s3://mybucket/myfile.txt
 ```
 
 ## Development
