@@ -7,7 +7,7 @@ defmodule ExS3Edit.MixProject do
     [
       app: @app,
       version: "0.1.0",
-      elixir: "~> 1.12",
+      elixir: "~> 1.13.0-dev",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       releases: [{@app, release()}],
@@ -40,7 +40,7 @@ defmodule ExS3Edit.MixProject do
       cookie: "#{@app}_cookie",
       quiet: true,
       steps: [:assemble, &Bakeware.assemble/1],
-      strip_beams: Mix.env() == :prod
+      strip_beams: [keep: ["Docs"]]
     ]
   end
 end
