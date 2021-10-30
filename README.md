@@ -1,7 +1,8 @@
 # ex-s3-edit
 Edit files directly on Amazon S3 in CLI
-
-[![MIT license](https://img.shields.io/github/license/tsub/s3-edit.svg?style=flat-square)](https://github.com/tsub/s3-edit/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/tsub/s3-edit.svg?style=flat-square)](https://github.com/joegiralt/ex-s3-edit/releases)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/tsub/s3-edit/master.svg?style=flat-square)](https://circleci.com/gh/joegiralt/ex-s3-edit/tree/main)
+[![MIT license](https://img.shields.io/github/license/tsub/s3-edit.svg?style=flat-square)](https://github.com/joegiralt/ex-s3-edit/blob/main/LICENSE)
 
 Directly inspired by [s3-edit](https://github.com/tsub/s3-edit) written in Go by [tsub](https://github.com/tsub).
 
