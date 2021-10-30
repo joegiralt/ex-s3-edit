@@ -9,7 +9,7 @@ Directly inspired by [s3-edit](https://github.com/tsub/s3-edit) written in Go by
 
 ### Install with Homebrew
 
-For macOS and Linux(coming soon)
+For macOS(ARM, Intel coming soon) and Linux(coming soon)
 
 ```
 $ brew install joegiralt/ex-s3-edit/ex-s3-edit
