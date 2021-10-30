@@ -37,7 +37,7 @@ defmodule ExS3Edit.Cli do
   end
 
   def command(:edit, path) do
-    with {:ok, raw_uri} <- URI.new(path),
+    with {:ok, raw_uri} <- parse_path(path),
          {:ok, file_name, file_body} <- S3.fetch_file(raw_uri),
          {:ok, _msg} <- TmpFileUtil.write(file_name, file_body) do
       Editor.open_with_default(file_name)
@@ -49,7 +49,7 @@ defmodule ExS3Edit.Cli do
   end
 
   def command(:read, path) do
-    with {:ok, raw_uri} <- URI.new(path),
+    with {:ok, raw_uri} <- parse_path(path),
          {:ok, _file_name, file_body} <- S3.fetch_file(raw_uri) do
       """
       S3 Path:
@@ -62,5 +62,10 @@ defmodule ExS3Edit.Cli do
     else
       err -> err
     end
+  end
+
+  # TODO: switch to URI.new once elixir 1.13 is out
+  defp parse_path(path) do
+    {:ok, URI.parse(path) }
   end
 end
