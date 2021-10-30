@@ -3,6 +3,22 @@ defmodule ExS3Edit.Cli do
   alias ExS3Edit.Editor
   alias ExS3Edit.S3
 
+  def command(:help) do
+    """
+     --help          Surfaces this help prompt
+
+      --edit          Expects a s3 path
+                      example: --edit s3://your-bucket/your-file.txt
+
+      --read          Prints body to CLI
+                      example: --read s3://your-bucket/your-file.txt
+
+      --list          Lists all files in all s3 buckets
+
+      --version       Displays current project version
+    """
+  end
+
   def command(:list) do
     S3.fetch_bucket_names()
     |> Enum.map(fn bucket_name ->
@@ -11,18 +27,9 @@ defmodule ExS3Edit.Cli do
     |> List.flatten()
   end
 
-  def command(:help) do
-    """
-     --help          Surfaces this help prompt
-
-      --edit          Expects a s3 path
-                      example: --edit s3://your-bucket/your-file.txt
-
-      --read          Prints body to screen
-                      example: --read s3://your-bucket/your-file.txt
-
-      --list          Lists all files in all s3 buckets
-    """
+  def command(:version) do
+    Application.spec(:ex_s3_edit, :vsn)
+    |> List.to_string()
   end
 
   def command(:unknown) do

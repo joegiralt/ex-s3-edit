@@ -11,7 +11,8 @@ defmodule ExS3Edit.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       releases: [{@app, release()}],
-      preferred_cli_env: [release: :prod]
+      preferred_cli_env: [release: :prod],
+      test_paths: ["test"]
     ]
   end
 

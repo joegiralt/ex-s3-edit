@@ -17,7 +17,13 @@ defmodule ExS3Edit do
     {opts, word, _} =
       args
       |> OptionParser.parse(
-        switches: [edit: :boolean, list: :boolean, help: :boolean, read: :boolean]
+        switches: [
+          edit: :boolean,
+          list: :boolean,
+          help: :boolean,
+          read: :boolean,
+          version: :boolean
+        ]
       )
 
     {opts, List.to_string(word)}
@@ -29,6 +35,7 @@ defmodule ExS3Edit do
       {:read, _} -> Cli.command(:read, flag_value)
       {:help, _} -> Cli.command(:help)
       {:list, _} -> Cli.command(:list)
+      {:version, _} -> Cli.command(:version)
       _ -> Cli.command(:unknown)
     end
     |> IO.puts()
